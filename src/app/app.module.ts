@@ -9,6 +9,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { from } from 'rxjs';
+//service
+import { CartService} from './cart.service';
+import { CartComponent } from './cart/cart.component';
 const appRoutes:Routes = [
   {
     path:'',
@@ -26,17 +29,21 @@ const appRoutes:Routes = [
     ProductAlertComponent,
     ProductDetailsComponent,
     ProductListComponent,
-    TopBarComponent
+    TopBarComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent}
     ])
     //RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
