@@ -1,0 +1,17 @@
+div{
+    background-color: #1976D2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+h1{
+    color: white;
+}
+i{
+    color: #1976D2;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
